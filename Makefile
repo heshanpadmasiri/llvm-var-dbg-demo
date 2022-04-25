@@ -7,7 +7,7 @@ build: $(target_files)
 	llc-12 -filetype=obj $< -o $@
 
 %.exe: %.o
-	clang-10 -g -o0 $< -o $@
+	clang-10 -g $< -o $@
 
 clean:
 	rm -rf *.exe
